@@ -16,6 +16,6 @@ _IP=$(hostname -I) || true
 if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
-cd /var/proyMarengo/ && sudo python gps.py &
+cd /var/www/html/sistema/ && sudo python montar.sh &
 
 exit 0
