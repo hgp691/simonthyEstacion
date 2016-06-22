@@ -3,9 +3,10 @@
 #creacion de las carpetas en usb que guardan los datos
 sudo mkdir /mnt/usb
 sudo mount /dev/sda1/ /mnt/usb/
-sudo mkdir /mnt/usb/config/
-sudo mkdir /mnt/usb/datos/
-sudo mkdir /mnt/usb/logs/
+sudo mkdir /mnt/usb/simonthy/
+sudo mkdir /mnt/usb/simonthy/config/
+sudo mkdir /mnt/usb/simonthy/datos/
+sudo mkdir /mnt/usb/simonthy/logs/
 
 #instalar libreria DHT11
 sudo apt-get install python-dev -y
@@ -22,7 +23,7 @@ sudo rm /etc/crontab
 sudo cp conf/crontab /etc/crontab
 
 #copiar los archivos de configuracion
-sudo cp /config/*.json /mnt/usb/config/ -r
+sudo cp /config/*.json /mnt/usb/simonthy/config/ -r
 
 #instalar servidor web
 sudo apt-get install apache2 -y
