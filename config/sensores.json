@@ -1,0 +1,5 @@
+{
+	"PIN_HUMEDAD": 4,
+	"PUERTO_GPS": "/dev/ttyAMA0",
+	"VELOCIDAD_GPS": 9600
+}
