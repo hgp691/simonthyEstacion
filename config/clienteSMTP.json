@@ -1,8 +1,8 @@
 {
 	"ENVIAR": "NO",
-  	"FROM": "su_cuenta_@gmail.com",
+  	"FROM": "hgp691@gmail.com",
   	"DIRECCION": "smtp.gmail.com",
   	"PUERTO": 587,
   	"START_TLS": "YES",
-  	"CLAVE": "clave del correo"
+  	"CLAVE": "gUSWNgQJn3bB"
 }
