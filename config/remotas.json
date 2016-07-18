@@ -1,8 +1,9 @@
 [
 	{
-		"NOMBRE":"Remota",
+		"NOMBRE":"Sonda uno",
 		"DIRECCION":1,
 		"PUERTO":"/dev/ttyUSB0",
-		"VELOCIDAD":9600
+		"VELOCIDAD":9600,
+		"ACTIVA":"YES"
 	}
 ]

@@ -13,7 +13,7 @@ def obtenerRemota(obj):
 		ser = serial.Serial(puerto, velocidad, timeout=2)
 		ser.close()
 		ser.open()
-		ser.write("@001")
+		ser.write(obj["DIRECCION"])
 		time.sleep(3)
 		ser.flush()
 		print "Imprimiendo dato"

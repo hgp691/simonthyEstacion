@@ -17,7 +17,7 @@ def obtenerRemotas():
 	with open(ruta) as data_file:
                 data=json.load(data_file)
                 return data
-print obtenerRemotas()
+#print obtenerRemotas()
 
 def obtenerClienteSMTP():
 	ruta = obtenerRutaConfiguracion() + "clienteSMTP.json"
