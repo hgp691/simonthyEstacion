@@ -9,6 +9,7 @@ import log
 import sys
 
 import json1
+import socket
 
 
 def correo(subject,text,to):
@@ -24,6 +25,7 @@ def correo(subject,text,to):
 		mailServer.ehlo()
 		mailServer.starttls()
 		mailServer.ehlo()
+		print cliente["FROM"]+" "+cliente["CLAVE"]
 		mailServer.login(cliente["FROM"],cliente["CLAVE"])
 		mailServer.sendmail(cliente["FROM"],to,msj.as_string())
 		mailServer.close()
@@ -32,5 +34,25 @@ def correo(subject,text,to):
 		print res0
 		res="Excepcion 1 correo.correo -> ",sys.exc_info()[1]
 		print res
+		log.escribirLog(res0)
+		log.escribirLog(res)
 
-correo("Hola mundo","Este es el texto","hgp691@gmail.com")
+#correo("Hola mundo","Este es el texto","hgp691@gmail.com")
+#envia el correo de inicio apenas se ejecuta el sistema
+def inicio(to):
+    	asunto="Se ha reiniciado el sistema"
+    	#a=netifaces.ifaddresses('eth0')
+	a=([(s.connect(('8.8.8.8', 80)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1])
+    	#a="prueba"
+	fecha=json1.obtenFechaActual()
+	texto="<html><h1>REINICIO DEL SISTEMA<h1><br>"
+    	texto="Se ha reiniciado el sistema a las " + str(fecha) +".<br>La direccion del sistema es: <br>" + str(a)+"<br><br>"
+	#a=os.path.getsize("/mnt/usb/dataCenter/data/datos/datos.csv")
+	#texto=texto+"El tamano del archivo es: \n"+str(a)+" bytes.<br><br>"
+	texto=texto+"</html>"
+    	if correo(asunto,texto,to):
+		print "envio de correo de inicio realizado con exito"
+                return True
+    	else:
+		print "no se pudo enviar correo de inicio"
+        	return False

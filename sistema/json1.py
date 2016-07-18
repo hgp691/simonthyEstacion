@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import json
+import time
 
 def obtenerRutaConfiguracion():
 	return "../config/"
@@ -20,5 +21,13 @@ def obtenerCientesCorreo():
 	with open(ruta) as data_file:
 		data=json.load(data_file)
 		return data
-
-print obtenerCientesCorreo()[0]["EMAIL"]
+#devuelve la fecha y hora actuales sin espacios para nombrar un archivo
+def obtenFechaActualArchivo():
+	fecha=time.strftime("%Y-%m%d$%H:%M")
+	print "nombre del nuevo archivo " +str(fecha)
+	return fecha
+#devuelve la hora actual del sistema en formato
+def obtenFechaActual():
+	fecha=time.strftime("%Y-%m-%d %H:%M:%S",time.localtime())
+	print fecha
+	return fecha
