@@ -36,4 +36,4 @@ def subirLocal(temperatura,humedad):
      	return False
         
     
-#subir(2.5,34.5,34.7,12.6)
+subirLocal(2.5,34.5,34.7,12.6)

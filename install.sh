@@ -13,14 +13,18 @@ sudo apt-get install python-dev -y
 cd /mnt/usb/ && sudo git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 cd /mnt/usb/Adafruit_Python_DHT && sudo python setup.py install
 
+#copiar los archivos del sistema
+sudo mkdir /var/www/sistema
+sudo cp sistema/* /var/www/sistema/ -r
+
 #copiar los archivos de inicio
 sudo cp /etc/rc.local /etc/rc.local.bup
 sudo rm /etc/rc.local
-sudo cp conf/rc.local /etc/rc.local
+sudo cp config/rc.local /etc/rc.local
 
 sudo cp /etc/crontab /etc/crontab.bup
 sudo rm /etc/crontab
-sudo cp conf/crontab /etc/crontab
+sudo cp config/crontab /etc/crontab
 
 #copiar los archivos de configuracion
 sudo cp /config/*.json /mnt/usb/simonthy/config/ -r

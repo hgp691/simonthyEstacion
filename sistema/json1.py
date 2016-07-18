@@ -21,4 +21,4 @@ def obtenerCientesCorreo():
 		data=json.load(data_file)
 		return data
 
-print obtenerCientesCorreo()[0]["NOMBRE"]
+print obtenerCientesCorreo()[0]["EMAIL"]
