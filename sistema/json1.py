@@ -3,7 +3,7 @@ import json
 import time
 
 def obtenerRutaConfiguracion():
-	return "../config/"
+	return "/mnt/usb/simonthy/config/"
 
 def obtenerPin():
 	ruta = obtenerRutaConfiguracion() + "sensores.json"
@@ -11,6 +11,14 @@ def obtenerPin():
 	with open(ruta) as data_file:
 		data = json.load(data_file)
 		return data['PIN_HUMEDAD']
+#print obtenerPin()
+def obtenerRemotas():
+	ruta = obtenerRutaConfiguracion() + "remotas.json"
+	with open(ruta) as data_file:
+                data=json.load(data_file)
+                return data
+print obtenerRemotas()
+
 def obtenerClienteSMTP():
 	ruta = obtenerRutaConfiguracion() + "clienteSMTP.json"
 	with open(ruta) as data_file:

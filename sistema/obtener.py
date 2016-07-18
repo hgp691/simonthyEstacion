@@ -3,8 +3,8 @@
 import datetime
 import time
 import Adafruit_DHT
-import enviar
-import json
+import escritura
+import json1
 
 #funcion que obtiene la hora
 def obtenerHora():
@@ -18,24 +18,14 @@ def obtenerFecha():
 #definicion del sensor
 sensor = Adafruit_DHT.DHT11
 # conectado a GPIO23
-pin = 4
+pin = json1.obtenerPin()
+print pin
 #obtener la lectura
 humedad, temperatura = Adafruit_DHT.read_retry(sensor, pin)
 #si la lectura esta bn
 if humedad is not None and temperatura is not None:
-    #print temperature 
-	#print humidity
-	with open('datos/GPRMC.json') as data_file:
-         	data = json.load(data_file)
-                Hora_loc=data["Hora"]
-                Fecha_loc=data["Fecha"]
-                Lat=data["Latitude "]
-               	Lon=data["Longitude"]
-                N_S=data["N/S"]
-                E/W=data["E/W"]
-                cadena=data["cadena"]
-                UTC_time=data["UTC time"]
-	enviar.enviarDatos("0",obtenerFecha(),obtenerHora(),temperatura,humedad,Hora_loc,Fecha_loc,Lat,Lon,N_S,E_W,cadena,UTC_time)
+	print temperature 
+	print humidity
 else:
         print 'Error obteniendo'
 
