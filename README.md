@@ -10,3 +10,6 @@ Cambiar a la carpeta var
 
 Clonar el repositorio
 - sudo git clone https://github.com/hgp691/simonthyEstacion
+
+Instalar el sistema
+- sudo bash simonthyEstacion/install.sh
