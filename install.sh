@@ -19,15 +19,13 @@ sudo apt-get install php5 -y
 
 #copiar los archivos del sistema
 sudo mkdir /var/www/sistema
-sudo cp sistema/* /var/www/sistema/ -r
+sudo cp sistema /var/www/sistema/ -r
 
 #copiar los archivos de inicio
 sudo cp /etc/rc.local /etc/rc.local.bup
-sudo rm /etc/rc.local
 sudo cp config/rc.local /etc/rc.local
 
 sudo cp /etc/crontab /etc/crontab.bup
-sudo rm /etc/crontab
 sudo cp config/crontab /etc/crontab
 
 #copiar los archivos de configuracion
