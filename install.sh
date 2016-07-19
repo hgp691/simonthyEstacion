@@ -19,17 +19,17 @@ sudo apt-get install php5 -y
 
 #copiar los archivos del sistema
 sudo mkdir /var/www/sistema
-sudo cp sistema /var/www/sistema/ -r
+sudo cp /var/simonthyEstacion/sistema /var/www/sistema/ -r
 
 #copiar los archivos de inicio
 sudo cp /etc/rc.local /etc/rc.local.bup
-sudo cp config/rc.local /etc/rc.local
+sudo cp /var/simonthyEstacion/config/rc.local /etc/rc.local
 
 sudo cp /etc/crontab /etc/crontab.bup
-sudo cp config/crontab /etc/crontab
+sudo cp /var/simonthyEstacion/config/crontab /etc/crontab
 
 #copiar los archivos de configuracion
-sudo cp /config/*.json /mnt/usb/simonthy/config/ -r
+sudo cp /var/simonthyEstacion/config/*.json /mnt/usb/simonthy/config/ -r
 
 
 sudo mkdir /var/www/html/webservices
