@@ -2,8 +2,8 @@
 
 #Instalación
 - Instalar Raspbian jesse
-- sudo apt-get upgrade
 - sudo apt-get update
+- sudo apt-get upgrade
 
 Cambiar a la carpeta var
 - cd /var
