@@ -4,6 +4,11 @@
 - Instalar Raspbian jesse
 - sudo apt-get update
 - sudo apt-get upgrade
+- sudo reboot
+
+Hacer configuraciones de expandir memoria y de internacionalización y reiniciar
+- sudo raspi-config
+
 
 Cambiar a la carpeta var
 - cd /var
