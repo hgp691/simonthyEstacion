@@ -13,6 +13,10 @@ sudo apt-get install python-dev -y
 cd /mnt/usb/ && sudo git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 cd /mnt/usb/Adafruit_Python_DHT && sudo python setup.py install
 
+#instalar servidor web
+sudo apt-get install apache2 -y
+sudo apt-get install php5 -y
+
 #copiar los archivos del sistema
 sudo mkdir /var/www/sistema
 sudo cp sistema/* /var/www/sistema/ -r
@@ -29,9 +33,6 @@ sudo cp config/crontab /etc/crontab
 #copiar los archivos de configuracion
 sudo cp /config/*.json /mnt/usb/simonthy/config/ -r
 
-#instalar servidor web
-sudo apt-get install apache2 -y
-sudo apt-get install php5 -y
 
 sudo mkdir /var/www/html/webservices
 sudo cp webservices/* /var/www/html/webservices/
