@@ -19,7 +19,7 @@ sudo apt-get install php5 -y
 
 #copiar los archivos del sistema
 sudo mkdir /var/www/sistema
-sudo cp /var/simonthyEstacion/sistema /var/www/sistema/ -r
+sudo cp /var/simonthyEstacion/sistema/* /var/www/sistema/ -r
 
 #copiar los archivos de inicio
 sudo cp /etc/rc.local /etc/rc.local.bup
