@@ -25,8 +25,9 @@ def local():
 	humedad, temperatura = Adafruit_DHT.read_retry(sensor, pin)
 	#si la lectura esta bn
 	if humedad is not None and temperatura is not None:
-		print temperature 
-		print humidity
+		print temperatura 
+		print humedad
+		escritura.subir(temperatura,humedad,"local")
 	else:
         	print 'Error obteniendo'
 
