@@ -5,6 +5,7 @@ import time
 import Adafruit_DHT
 import escritura
 import json1
+import log
 
 #funcion que obtiene la hora
 def obtenerHora():
@@ -30,4 +31,5 @@ def local():
 		escritura.subir(temperatura,humedad,"local")
 	else:
         	print 'Error obteniendo'
+        	log.escribirLog("Error obteniendo dato local")
 
