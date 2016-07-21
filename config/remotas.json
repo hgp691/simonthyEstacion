@@ -4,6 +4,6 @@
 		"DIRECCION":1,
 		"PUERTO":"/dev/ttyUSB0",
 		"VELOCIDAD":9600,
-		"ACTIVA":"YES"
+		"ACTIVA":"NO"
 	}
 ]
