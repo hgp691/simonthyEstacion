@@ -4,7 +4,7 @@ import remota
 import obtener
 import json1
 
-#obtener.local()
+obtener.local()
 
 remotas=json1.obtenerRemotas()
 
