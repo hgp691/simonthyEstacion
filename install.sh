@@ -1,5 +1,8 @@
 #instalacion de archivos
 
+#cambiar locale
+sudo cp /usr/share/zoneinfo/America/Bogota /etc/localtime
+
 #creacion de las carpetas en usb que guardan los datos
 sudo mkdir /mnt/usb
 sudo mount /dev/sda1 /mnt/usb
