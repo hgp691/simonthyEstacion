@@ -2,6 +2,8 @@
 import json
 import time
 import csv
+import objetos
+
 
 def obtenerRutaConfiguracion():
 	return "/mnt/usb/simonthy/config/"
@@ -55,10 +57,7 @@ def obtenerArreglo(archivo):
         arreglo=[]
         reader=csv.reader(open(ruta,'rb'))
         for index,row in enumerate(reader):
-                obj["fecha"]=row[0]
-                obj["hora"]=row[1]
-                obj["temperatura"]=row[2]
-                obj["humedad"]=row[3]
+                obj = TyH(row[0],row[1],row[2],row[3])
                 arreglo.append(obj)
         return arreglo
 obtenerArreglo("local.csv")
