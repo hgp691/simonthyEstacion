@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import json
 import time
+import csv
 
 def obtenerRutaConfiguracion():
 	return "/mnt/usb/simonthy/config/"
