@@ -1,5 +1,7 @@
 {
-	"ENVIAR": "NO",
+	"ENVIAR_INICIO": "NO",
+	"ENVIAR_COMUNICACION":"YES",
+	"ENVIAR_REPORTE":"YES",
   	"FROM": "motortechnology2012@gmail.com",
   	"DIRECCION": "smtp.gmail.com",
   	"PUERTO": 587,
