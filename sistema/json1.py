@@ -60,4 +60,40 @@ def obtenerArreglo(archivo):
                 obj = TyH(row[0],row[1],row[2],row[3])
                 arreglo.append(obj)
         return arreglo
-obtenerArreglo("local.csv")
+def cantidadFilasArchivo(ruta):
+        try:
+                rut="/mnt/usb/simonthy/datos/"+ruta
+                i=0
+                reader=csv.reader(open(rut,'rb'))
+                for index,row in enumerate(reader):
+                        i+=1
+                return i
+        except:
+                resp="Excepcion json1.cantidadFilasArchivo -> ",sys.exc_info()[1]
+                return "Nope"
+                print resp
+def revisarUltimos5Temp(ruta):
+        if cantidadFilasArchivo(ruta) > 5:
+                a=obtenerArreglo("local.csv")
+                b=a[len(a)-1]
+                c=a[len(a)-2]
+                d=a[len(a)-3]
+                e=a[len(a)-4]
+                f=a[len(a)-5]
+                g = (float(b.temperatura)+float(c.temperatura)+float(d.temperatura)+float(e.temperatura)+float(f.temperatura))/5
+                return g
+        else:
+                return 0
+def revisarUltimos5Hum(ruta):
+        if cantidadFilasArchivo(ruta) > 5:
+                a=obtenerArreglo("local.csv")
+                b=a[len(a)-1]
+                c=a[len(a)-2]
+                d=a[len(a)-3]
+                e=a[len(a)-4]
+                f=a[len(a)-5]
+                g = (float(b.humedad)+float(c.humedad)+float(d.humedad)+float(e.humedad)+float(f.humedad))/5
+                return g
+        else:
+                return 0
+              
