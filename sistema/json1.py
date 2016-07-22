@@ -57,7 +57,7 @@ def obtenerArreglo(archivo):
         arreglo=[]
         reader=csv.reader(open(ruta,'rb'))
         for index,row in enumerate(reader):
-                obj = TyH(row[0],row[1],row[2],row[3])
+                obj = objetos.TyH(row[0],row[1],row[2],row[3])
                 arreglo.append(obj)
         return arreglo
 def cantidadFilasArchivo(ruta):
