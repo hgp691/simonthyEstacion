@@ -76,7 +76,7 @@ def cantidadFilasArchivo(ruta):
                 print resp
 def revisarUltimos5Temp(ruta):
         if cantidadFilasArchivo(ruta) > 5:
-                a=obtenerArreglo("local.csv")
+                a=obtenerArreglo(ruta)
                 b=a[len(a)-1]
                 c=a[len(a)-2]
                 d=a[len(a)-3]
@@ -88,7 +88,7 @@ def revisarUltimos5Temp(ruta):
                 return 0
 def revisarUltimos5Hum(ruta):
         if cantidadFilasArchivo(ruta) > 5:
-                a=obtenerArreglo("local.csv")
+                a=obtenerArreglo(ruta)
                 b=a[len(a)-1]
                 c=a[len(a)-2]
                 d=a[len(a)-3]
