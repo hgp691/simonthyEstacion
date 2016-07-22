@@ -5,9 +5,36 @@ import log
 import objetos
 
 
+def textoSonda(sonda,setT,setH):
+	texto="<tr>"
+	texto+="<td>"+sonda.nombre+"</td>"
+	if sonda.temperatura > setT :
+		texto+="<td><strong style='color:red'>"+str(sonda.temperatura)+" C</strong></td>"
+	else:
+		texto+="<td><strong style='color:green'>"+str(sonda.temperatura)+" C</strong></td>"
+	if sonda.humedad > setH:
+		texto+="<td><strong style='color:red'>"+str(sonda.humedad)+" RH</strong></td>"
+	else:
+		texto+="<td><strong style='color:green'>"+str(sonda.humedad)+" RH</strong></td>"
+	texto+="<td>"+sonda.FechaUltimoDato+" "+sonda.HoraUltimoDato+"</td>"
+	texto+="</tr>"
+	return texto
 def enviarAlarma(arreglo,setT,setH):
 	print "ENVIAR ALARMA"	
-
+	asunto="ALARMA por cambio de estado !!!"
+	texto='<html><h1>ALARMA!!</h1>'
+	texto+="<table>"
+	texto+="<tr>"
+	texto+="<th>NOMBRE SONDA:</th>"
+	texto+="<th>TEMPERATURA (SET:"+str(setT)+" C)</th>"
+	texto+="<th>HUMEDAD (SET:"+str(setH)+" RH)</th>"
+	texto+="<th>FECHA ULTIMO DATO:</th>"
+	texto+="</tr>"
+	for sonda in arreglo:
+		texto+=textoSonda(sonda,setT,setH)
+	texto+="</table>"
+	texto+="</html>"
+	correo.correo(asunto,texto,"hgp691@gmail.com")
 
 def revisarValores():
 	log.escribirLog("revisarValores")
