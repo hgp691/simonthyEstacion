@@ -3,6 +3,8 @@ import json
 import time
 import csv
 import objetos
+from datetime import datetime
+from datetime import timedelta
 
 
 def obtenerRutaConfiguracion():
@@ -96,4 +98,18 @@ def revisarUltimos5Hum(ruta):
                 return g
         else:
                 return 0
-              
+def ultimo(archivo):
+	a=obtenerArreglo(archivo)
+	return a[len(a)-1]
+def compararUltimo(remota):
+	a=ultimo(str(remota)+".csv")
+	fecha = a.fecha+" "+a.hora
+	fecha1=datetime.strptime(fecha, "%Y-%m-%d %H:%M:%S")
+	print "Ultimo dato: "
+	print fecha1
+	fechaActual=datetime.now()
+	print "Fecha actual:"
+	print fechaActual
+	esperada = fechaActual-timedelta(minutes=5)
+	return fecha1 < esperada
+#print compararUltimo("local")
