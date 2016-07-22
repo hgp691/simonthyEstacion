@@ -46,7 +46,7 @@ def inicio(to):
     	#a="prueba"
 	fecha=json1.obtenFechaActual()
 	texto="<html><h1>REINICIO DEL SISTEMA<h1><br>"
-    	texto="Se ha reiniciado el sistema a las " + str(fecha) +".<br>La direccion del sistema es: <br>" + str(a)+"<br><br>"
+    	texto="Se ha reiniciado el sistema a las " + str(fecha) +".<br>La direccion del sistema es: <br><i>" + str(a)+"</i><br><br>"
 	#a=os.path.getsize("/mnt/usb/dataCenter/data/datos/datos.csv")
 	#texto=texto+"El tamano del archivo es: \n"+str(a)+" bytes.<br><br>"
 	texto=texto+"</html>"
@@ -63,7 +63,7 @@ def correoSerial(to,sonda):
 	texto="<html><h1>ALARMA SERIAL</h1>\n<br>\n<br>"
 	texto=texto+"Fecha de alarma:  "+str(fecha)+"\n<br>\n<br>"
 	texto=texto+"<br>Hay un problema grave con la comunicacion,intente reiniciar el sistema."
-	texto=texto+'De no solucionarse por favor reporte la falla de la sonda '+sonda+' al CES.<br><br>SIMONTHy continuara registrando el monitoreo con los sensores ubicados en el RACK.<br><br>'
+	texto=texto+'De no solucionarse por favor reporte la falla de la sonda <i>'+sonda+'</i> al CES.<br><br>SIMONTHy continuara registrando el monitoreo con los sensores ubicados en el RACK.<br><br>'
 	texto=texto+"</html>"
 	correo(asunto,texto,to)
 		

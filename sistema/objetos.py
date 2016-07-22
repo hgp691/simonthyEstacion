@@ -13,3 +13,5 @@ class sonda:
 		self.nombre=nombre
 		self.FechaUltimoDato=FechaUltimoDato
 		self.HoraUltimoDato=HoraUltimoDato
+	def __str__(self):
+		return "{'temperatura':"+str(self.temperatura)+",'humedad':"+str(self.humedad)+",'nombre':"+self.nombre+",'FechaUltimoDato':"+self.FechaUltimoDato+",'HoraUltimoDato':"+self.HoraUltimoDato+"}"
