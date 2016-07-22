@@ -1,8 +1,10 @@
 #!/usr/bin/python
 import json1
 import correo
+import log
 
 def revisarComunicacion():
+	log.escribirLog("revisarComunicacion")
 	cliente=json1.obtenerClienteSMTP()
 	if cliente["ENVIAR_COMUNICACION"] == "YES":
 		a=json1.obtenerRemotas()

@@ -6,10 +6,11 @@ import objetos
 
 
 def enviarAlarma(arreglo,setT,setH):
-	
+	print "ENVIAR ALARMA"	
 
 
 def revisarValores():
+	log.escribirLog("revisarValores")
 	arreglo=[]
 	setT=json1.obtenerSetTemp()
 	setH=json1.obtenerSetHum()

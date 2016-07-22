@@ -14,3 +14,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 *  *    * * *   root 	cd /var/www/sistema/ && sudo python cadaMinuto.py
 */10 *  * * * root cd /var/www/sistema/ && sudo python cada10Minutos.py
+*/5 *  * * * root cd /var/www/sistema/ && sudo python cada5Minutos.py
