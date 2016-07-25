@@ -34,7 +34,9 @@ def enviarAlarma(arreglo,setT,setH):
 		texto+=textoSonda(sonda,setT,setH)
 	texto+="</table>"
 	texto+="</html>"
-	correo.correo(asunto,texto,"hgp691@gmail.com")
+	clientes=json1.obtenerCientesCorreo()
+        for cliente in clientes:
+                correo.correo(asunto,texto,cliente["EMAIL"])
 
 def revisarValores():
 	log.escribirLog("revisarValores")
