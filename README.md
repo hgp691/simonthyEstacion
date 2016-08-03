@@ -1,6 +1,6 @@
-# simonthyEstacion
+# simonthyEstacion#
 
-#Instalación
+##Instalación##
 - Descargar Raspbian jesse (No esta probado en la versión LITE) https://www.raspberrypi.org/downloads/raspbian/
 - Descargar Win32 Disk Imager (Solo usuarios windows) https://sourceforge.net/projects/win32diskimager/
 - Introduzca una memoria SD de mínimo 8Gb
