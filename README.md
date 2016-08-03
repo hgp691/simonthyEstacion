@@ -1,6 +1,7 @@
 # simonthyEstacion
 
 #Instalación
+- Descargar Raspbian jesse https://www.raspberrypi.org/downloads/raspbian/
 - Instalar Raspbian jesse
 - sudo apt-get update
 - sudo apt-get upgrade
