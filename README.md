@@ -9,7 +9,6 @@
 - Conectese por SSH a la dirección de la raspberry.
 - Por defecto el usuario es pi y la contraseña es raspberry.
 - ejecute sudo apt-get update
-- ejecute sudo apt-get upgrade
 - ejecute sudo reboot.
 - Conectese por SSH a la dirección de la raspberry.
 - sudo raspi-config
